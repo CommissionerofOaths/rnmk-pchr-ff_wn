@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>COMMUNICATION</title>
   <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="shortcut icon" href="thiru.ico" type="image/x-icon" />
   <link rel="icon" href="thiru.ico" type="image/x-icon" />
 
   <style>
     header {
-      height: 11vh; /* Reduced header size */
+      height: 11vh;
       background-color: lightcoral;
       display: flex;
       justify-content: center;
@@ -33,18 +33,20 @@
       font-weight: bold;
     }
     @keyframes blink {
-      50% { opacity: 0; }
+      50% {
+        opacity: 0;
+      }
     }
     marquee {
       font-weight: bold;
       color: navy;
     }
     table img {
-      max-width: 80px;
+      max-width: 100%;
       height: auto;
     }
     thead.light-teal {
-      background-color: #20c997 !important; /* light teal */
+      background-color: #20c997 !important;
       color: white;
     }
     button:disabled {
@@ -57,6 +59,9 @@
       height: 2px;
       background-color: lightgray;
     }
+    .icon-img {
+      max-height: 50px;
+    }
   </style>
 </head>
 <body>
@@ -67,81 +72,79 @@
   </header>
 
   <!-- Row below header -->
-  <div class="container-fluid text-center py-2" style="background-color: teal; color:white;">
-    <div class="row align-items-center">
-      <div class="col-1"></div>
-      <div class="col-2">
-        <div id="today-date" class="fw-bold text-white"></div>
-      </div>
-      <div class="col-1">
-        <div id="current-time" class="fw-bold text-white"></div>
-      </div>
-      <div class="col-1"></div>
-      <div class="col-1"></div>
-      <div class="col-1"></div>
-      <div class="col-1">
-        <a href="https://www.indiapost.gov.in/calculate-postage?tab=international&fromPincode=110001&toCountry=US&product=parcel&weight=250&length=10&width=5&height=5&POD=false&ACK=0&REG=0&COD=0" target="_blank">
-          <img src="indiapost.png" class="img-fluid">
-        </a>
-      </div>
-      <div class="col-1">
-        <a href="https://www.indiapost.gov.in" target="_blank">
-          <img src="indiaposthome.png" class="img-fluid">
-        </a>
-      </div>
-      <div class="col-1">
-        <a href="https://www.google.com" target="_blank">
-          <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_160x56dp.png" alt="Google" class="img-fluid">
-        </a>
-      </div>
-      <div class="col-1"></div>
+<div class="container-fluid text-center py-2" style="background-color: teal; color:white;">
+  <div class="row align-items-center gy-2">
+    <div class="col-6 col-sm-3 col-md-2">
+      <div id="today-date" class="fw-bold"></div>
+    </div>
+    <div class="col-6 col-sm-3 col-md-2">
+      <div id="current-time" class="fw-bold"></div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-8 d-flex justify-content-end flex-wrap gap-2">
+      <a href="https://www.indiapost.gov.in/calculate-postage?tab=international&fromPincode=110001&toCountry=US&product=parcel&weight=250&length=10&width=5&height=5&POD=false&ACK=0&REG=0&COD=0" target="_blank">
+        <img src="indiapost.png" alt="Postage Calculator" class="img-fluid icon-img" />
+      </a>
+      <a href="https://www.indiapost.gov.in" target="_blank">
+        <img src="indiaposthome.png" alt="India Post Home" class="img-fluid icon-img" />
+      </a>
+      <a href="https://www.google.com" target="_blank">
+        <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_160x56dp.png" alt="Google" class="img-fluid icon-img" />
+      </a>
     </div>
   </div>
+</div>
 
   <!-- Spacing -->
-  <div class="my-5"></div>
+  <div class="my-4"></div>
 
   <!-- Highlight Text -->
   <div class="container">
     <h2 class="text-start"><span class="highlight">Intimation</span></h2>
-    <h3 p class="blink text-start"> The petitioner comply the instruction. </p> <h3>
-    <marquee direction="left">Fill the application and enclose ID proof of the petitioner</marquee>
+    <p class="blink text-start fs-5">The petitioner comply the instruction.</p>
+    <marquee direction="left" class="d-block mt-2">Fill the application and enclose ID proof of the petitioner</marquee>
   </div>
 
   <!-- Table 1 -->
   <div class="container my-4">
-    <table class="table table-bordered text-center align-middle">
-      <thead class="light-teal">
-        <tr>
-          <th style="background-color: lightblue;"> Petitioner</th>
-          <th style="background-color: lightblue;">Name</th>
-          <th style="background-color: lightblue;">Address</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td  style="background-color: aqua;"> <img src="pnr1.jpg" alt="Petitioner"></td>
-          <td style="background-color: lightyellow;">Ramakrishnan</td>
-          <td style="background-color: #FFD580;">181, Kollaimedu,Kattharikuppam, <br>Vellore 632103</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="table-responsive">
+      <table class="table table-bordered text-center align-middle">
+        <thead class="light-teal">
+          <tr>
+            <th style="background-color: lightblue;">Petitioner</th>
+            <th style="background-color: lightblue;">Name</th>
+            <th style="background-color: lightblue;">Address</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="background-color: aqua;">
+              <img src="pnr1.jpg" alt="Petitioner" class="img-fluid"/>
+            </td>
+            <td style="background-color: lightyellow;">Ramakrishnan</td>
+            <td style="background-color: #FFD580;">181, Kollaimedu, Kattharikuppam,<br>Vellore 632103</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 
   <!-- Table 2 -->
   <div class="container my-4">
-    <table class="table table-bordered align-middle">
-      <tr>
-        <td>
-          The petitioner ought to be pay corresponding services fees <br>as postal charges multiple correspondence each Rs.38 
-          and fees Rs.2,052 only
-        </td>
-        <td>
-          Without fine last date: <b>01/09/2025</b><br>
-          With fine Rs.1000/- last date: <b>06/09/2025</b>
-        </td>
-      </tr>
-    </table>
+    <div class="table-responsive">
+      <table class="table table-bordered align-middle">
+        <tr>
+          <td>
+            The petitioner ought to pay corresponding service fees<br>
+            as postal charges for multiple correspondences each Rs.38<br>
+            and fees Rs.2,052 only.
+          </td>
+          <td>
+            Without fine last date: <b>01/09/2025</b><br>
+            With fine Rs.1000/- last date: <b>06/09/2025</b>
+          </td>
+        </tr>
+      </table>
+    </div>
   </div>
 
   <!-- HR -->
@@ -151,15 +154,17 @@
 
   <!-- Notice Table -->
   <div class="container my-3">
-    <table class="table table-bordered text-center">
-      <tr style="background-color: lightyellow;">
-        <td class="fw-bold" style="color: darkred;">
-          DOCUMENTS HAS NOT SCANNED YET. HENCE, SCANNING CHARGES COMMUNICATE LATER.<br>
-          PREVIOUS PAID FOR STAMPS Rs.560/- ON 22/08/2025  DEFICIT, SO, ADDITIONAL STAMP OUGHT TO BE SUBMIT.<br>
-          // BY ORDER//
-        </td>
-      </tr>
-    </table>
+    <div class="table-responsive">
+      <table class="table table-bordered text-center">
+        <tr style="background-color: lightyellow;">
+          <td class="fw-bold text-danger">
+            DOCUMENTS HAVE NOT BEEN SCANNED YET. SCANNING CHARGES WILL BE COMMUNICATED LATER.<br>
+            PREVIOUSLY PAID FOR STAMPS Rs.560/- ON 22/08/2025 – DEFICIT; SO, ADDITIONAL STAMP MUST BE SUBMITTED.<br>
+            // BY ORDER //
+          </td>
+        </tr>
+      </table>
+    </div>
   </div>
 
   <!-- Disabled Button -->
@@ -171,10 +176,9 @@
   <script>
     function updateDateTime() {
       const now = new Date();
-      // Format date as DD/MM/YYYY (Indian format)
-      const date = now.getDate().toString().padStart(2,'0') + "/" + 
-                   (now.getMonth()+1).toString().padStart(2,'0') + "/" + 
-                   now.getFullYear();
+      const date = now.getDate().toString().padStart(2, '0') + "/" +
+        (now.getMonth() + 1).toString().padStart(2, '0') + "/" +
+        now.getFullYear();
       document.getElementById("today-date").innerText = date;
       document.getElementById("current-time").innerText = now.toLocaleTimeString();
     }
